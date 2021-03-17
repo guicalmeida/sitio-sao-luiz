@@ -4,14 +4,13 @@
 
 html, body {
     margin: 0;
-    overflow: hidden;
 }
 
 #videoBG {
     width: 100vw;
-    height: 100vh;
+    height: 94vh;
     position: absolute;
-    transform: scale(1.06);
+    object-fit: cover;
 }
 
 .header {
@@ -21,8 +20,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .title {
@@ -32,7 +32,7 @@ html, body {
 }
 
 .overlay {
-    height: 100vh;
+    height: 94vh;
     position: absolute;
     background: white;
     z-index: 1;
@@ -41,17 +41,40 @@ html, body {
 }
 
 .navbar {
+    position: relative;
     z-index: 3;
-    position: fixed;
     width: 100vw;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 80%);
 }
 
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
+    margin: 0;
+    height: 6vh;
+    align-items: center;
+    padding: 0;
 }
 
 ul {
     list-style-type: none;
+}
+
+.menuItem {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#item1::after {
+    content: "";
+    width: 170px;
+    background-color: black;
+    height: 3px;
+    position: absolute;
+    top: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin: 0 57px;
 }

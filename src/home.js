@@ -1,12 +1,12 @@
-import {generate, toBody} from "./shortcutFunctions";
+import {generate} from "./shortcutFunctions";
 
 function createHeader () {
     let header = generate("header", "header");
     let title = generate("h1", "title", "SÍTIO SÃO LUIZ");
     let subtitle = generate("h2", "subtitle", "Bem-vindo ao paraíso");
-    header.created.appendChild(title.created);
-    header.created.appendChild(subtitle.created);
-    return (header.created);
+    header.appendChild(title);
+    header.appendChild(subtitle);
+    return (header);
 }
 
 function background () {
@@ -25,7 +25,7 @@ function background () {
 
 function overlay() {
     let overlay = generate("div", "overlay");
-    return overlay.created;
+    return overlay;
 }
 
 export {createHeader, background, overlay};
