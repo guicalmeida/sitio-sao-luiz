@@ -1,32 +1,49 @@
 // create element with type, class and text content built-in
-let generate =  (element, elementClass, text) => {
+function generate (element, elementClass, text) {
     let created = document.createElement(element);
     created.classList.add(elementClass);
     created.textContent = text;
-    return {created}
+    return (created);
 }
 
-let generateMenu = (...listItems) => {
-    let nav = generate("nav", "navbar");
-    let navNode = nav.created;
+// create nav menu with ul nested and as many items as needed
+function generateMenu (...listItems) {
     let menu = generate("ul", "menu");
-    navNode.appendChild(menu.created);
-    let counter = 1;
-    listItems.forEach (e => {
-        let menuItem = document.createElement("li");
-        menuItem.classList.add(`menuItem`);
-        counter += 1;
-        menuItem.textContent = `${e}`;
-        menu.created.appendChild(menuItem);
+    let nav = generate("nav", "navbar");
+    let count = 1;
+    listItems.forEach (a => {
+        let menuItem = generate("li", "menuItem", `${a}`);
+        menuItem.setAttribute("id", `item${count}`);
+        count += 1;
+        menu.appendChild(menuItem);
     })
-    console.log(navNode)
-    return {navNode};
+    nav.appendChild(menu);
+    return nav;
 }
 
-function toBody (element) {
+// append element to Body content div
+function renderElement (element) {
     let bodyContent = document.querySelector("#content");
     let elementToAppend = element;
     bodyContent.appendChild(elementToAppend); 
 }
 
-export {generate, toBody, generateMenu}
+// append multiple childs to an element
+function multiAppend(parent, ...childs){
+    childs.forEach (e => {
+        parent.appendChild(e);
+    })
+    return parent;
+}
+
+//Change tabs
+function changeTab(...functionsToRender) {
+    let contentDiv = document.querySelector("#content");
+    if (!contentDiv.firstElementChild.isEqualNode(functionsToRender[0])) {
+        contentDiv.innerHTML = "";
+        functionsToRender.forEach(e => {
+            renderElement(e);
+        })
+    } 
+}
+export {generate, renderElement, generateMenu, multiAppend, changeTab}
