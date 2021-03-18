@@ -35,6 +35,5 @@ disponBtn.addEventListener("click", function(){
     changeTab(
         createCalendar()
     );
-    calendar.render();
 })
 
