@@ -18,7 +18,8 @@ function resumo () {
         let cozExtDesc = generate("p", "areaExternaDesc", "Próximo ao salão de jogos e à piscina, um forno de pizza e churrasqueira, equipados com todos utensílios necessários.");
         let entretTitulo = generate("h2", "areaExternaTitulo", "Entretenimento");
         let entretDesc = generate("p", "areaExternaDesc", "Campo de futebol, mesa para carteado, mesa de ping-pong, piscina, espaço para fogueira e muita área livre para brincadeiras são algumas opções para sua família - e para aproveitar um filme a noite, há TV a cabo e Netflix.");
-    multiAppend(areaExterna, piscinaTitulo, piscinaDesc, vegetacaoTitulo, vegetacaoDesc, cozExtTitulo, cozExtDesc, entretTitulo, entretDesc);
+        let contatoExtBtn = generate("button", "contatoBtn", "Traga sua família");
+    multiAppend(areaExterna, piscinaTitulo, piscinaDesc, vegetacaoTitulo, vegetacaoDesc, cozExtTitulo, cozExtDesc, entretTitulo, entretDesc, contatoExtBtn);
 
     let casa = generate("div", "casaDiv");
         let quartosTitulo = generate("h2", "casaTitulo", "7 suítes");
@@ -29,11 +30,17 @@ function resumo () {
         let salasDesc = generate("p", "casaDesc", "Além de uma ampla sala de estar, o sítio conta com uma sala de jantar e outra de leitura.");
         let equipeTitulo = generate("h2", "casaTitulo", "Equipe profissional");
         let equipeDesc = generate("p", "casaDesc", "Sua estadia será acompanhada pela Lu, auxiliar da casa encarregada da limpeza e culinária, e Pedro, gestor do sítio que ajudará com qualquer problema que possa surgir. Opcionalmente, você poderá também contratar churrasqueiro e pizzaiolo.");
-    multiAppend(casa, quartosTitulo, quartosDesc, cozinhaTitulo, cozinhaDesc, salasTitulo, salasDesc, equipeTitulo, equipeDesc)
- 
-    multiAppend(ficha, tamanho, areaExterna, casa);
+        let contatoCasaBtn = generate("button", "contatoBtn", "Reserve agora");
+    multiAppend(casa, quartosTitulo, quartosDesc, cozinhaTitulo, cozinhaDesc, salasTitulo, salasDesc, equipeTitulo, equipeDesc, contatoCasaBtn)
+    
+    let contato = generate("button", "contatoBtn", "Entre em contato");
+
+    multiAppend(ficha, tamanho, areaExterna, casa, contato);
+    
     return ficha;
 }
+
+
 
 
 export {resumo}

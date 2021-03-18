@@ -1,18 +1,26 @@
+/*geral*/
 :root {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
-html, body {
+html, body, p {
     margin: 0;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 
 #content {
-    min-height: 94vh;
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(
+180deg
+, rgb(234 253 255 / 78%) 39%, rgb(228 255 218 / 46%) 85%);
 }
 
+/*home*/
 #videoBG {
     width: 100vw;
-    height: 94vh;
+    height: 100vh;
     position: absolute;
     object-fit: cover;
 }
@@ -23,43 +31,69 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    color: white;
+    margin-left: 6%;
 }
 
 .title {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 5rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 300;
     font-style: italic;
+    margin: 20px 0 0 25px;
 }
 
 .overlay {
-    height: 94vh;
+    height: 100vh;
     position: absolute;
-    background: white;
-    z-index: 1;
+    background: rgb(183,255,144);
+    background: linear-gradient( 
+        90deg
+         , rgb(64 193 255 / 50%) 0%, rgba(140,244,181,0.5) 38%, rgba(94,233,222,0.3) 75%, rgba(17,153,142,0) 100%);
     width: 100vw;
-    opacity: 0.4;
+    z-index: 1;
 }
 
+button {
+    border: 0;
+    font-size: 100%;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px 19px 0 0;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.btnDiv{
+    margin: 40px 0 0 25px;
+}
+/*menu*/
 .navbar {
-    position: relative;
+        position: absolute;
     z-index: 3;
     width: 100vw;
-    background-color: antiquewhite;
-    box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 80%);
+    font-weight: 600;
+    margin: 10px 0;
 }
 
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
-    margin: 0;
-    height: 6vh;
+    margin: 0 auto;
+    height: 7vh;
     align-items: center;
     padding: 0;
+    width: 90vw;
+    background-color: #f4f4f5;
+    box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 80%);
+    color: #3ba4c3;
+    border-radius: 20px;
 }
 
 ul {
@@ -68,28 +102,53 @@ ul {
 
 .menuItem {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 14px 0;
 }
 
-#item1::after {
-    content: "";
-    width: 170px;
-    background-color: black;
-    height: 3px;
-    position: absolute;
-    top: 93%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin: 0 57px;
+.activeMenu{
+    width: 12%;
+    height: 4px;
+    background: #3ba4c3;
+    position: relative;
+    transform: translateY(-4px);
+    transition: all 0.5s ease;
 }
 
-.calendarDiv {
-    height: 70vh;
-    width: 70vw;
-    display: block;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+/*Espaço*/
+.resumo {
+    padding-top: 7%;
+}
+
+.tamanho {
+    text-align: center;
+}
+
+.tamanhoPre {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.tamanhoN{
+    font-weight: 800;
+    font-size: 5rem;
+    color: #3b9df3;
+}
+
+.tamanhoPos {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.areaExternaDiv {
+    padding: 1% 54% 1% 5%;
+}
+
+.casaDiv {
+    padding: 1% 5% 1% 54%;
+    text-align: end;
+}
+
+.construcao{
+    padding: 14vh;
 }
