@@ -12,10 +12,12 @@ function loadHome() {
         let saibaMaisBtn = generate("button", "button", "Conheça o sítio");
             saibaMaisBtn.addEventListener("click", e => {
                 changeTab(resumo());
+                active.setAttribute("style", "margin: 0 auto 0 26%");
             })
         let agendeBtn = generate("button", "button", "Marque uma data");
             agendeBtn.addEventListener("click", e => {
             changeTab(construcao());
+            active.setAttribute("style", "margin: 0 auto 0 44%");
             })
         multiAppend(btnDiv, saibaMaisBtn, agendeBtn);
         multiAppend(header, title, subtitle, btnDiv)
