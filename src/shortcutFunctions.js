@@ -1,7 +1,9 @@
 // create element with type, class and text content built-in
 function generate (element, elementClass, text) {
     let created = document.createElement(element);
-    created.classList.add(elementClass);
+    if (elementClass != undefined){
+        created.classList.add(elementClass);
+    }
     created.textContent = text;
     return (created);
 }
@@ -21,7 +23,7 @@ function generateMenu (...listItems) {
     return nav;
 }
 
-// append element to Body content div
+// append element to Body's content div
 function renderElement (element) {
     let bodyContent = document.querySelector("#content");
     let elementToAppend = element;

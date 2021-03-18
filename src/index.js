@@ -1,16 +1,18 @@
 import {renderElement, generateMenu, changeTab} from "./shortcutFunctions";
 import {createHeader, background, overlay} from "./home";
 import {resumo} from "./espaco";
+import { createCalendar } from "./disponibilidade";
 
 let body = document.querySelector("body");
 let contentDiv = document.querySelector("#content");
-body.insertBefore(generateMenu("Home", "Espaço", "Preço", "Localização", "Contato"), contentDiv)
+let menu = generateMenu("Home", "Espaço", "Preço", "Localização", "Contato");
+body.insertBefore(menu, contentDiv);
 
-function firstLoad() {
+(function firstLoad() {
     renderElement(createHeader());
     renderElement(overlay());
     renderElement(background());
-}
+})();
 
 let homeBtn = document.querySelector("#item1");
 homeBtn.addEventListener("click", e => {
@@ -28,11 +30,11 @@ espacoBtn.addEventListener("click", function(){
     );
 })
 
-firstLoad()
-
-
-
-
-
-
+let disponBtn = document.querySelector("#item3");
+disponBtn.addEventListener("click", function(){   
+    changeTab(
+        createCalendar()
+    );
+    calendar.render();
+})
 

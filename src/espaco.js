@@ -20,10 +20,18 @@ function resumo () {
         let entretDesc = generate("p", "areaExternaDesc", "Campo de futebol, mesa para carteado, mesa de ping-pong, piscina, espaço para fogueira e muita área livre para brincadeiras são algumas opções para sua família - e para aproveitar um filme a noite, há TV a cabo e Netflix.");
     multiAppend(areaExterna, piscinaTitulo, piscinaDesc, vegetacaoTitulo, vegetacaoDesc, cozExtTitulo, cozExtDesc, entretTitulo, entretDesc);
 
-    
-
-
-    multiAppend(ficha, tamanho, areaExterna);
+    let casa = generate("div", "casaDiv");
+        let quartosTitulo = generate("h2", "casaTitulo", "7 suítes");
+        let quartosDesc = generate("p", "casaDesc", "4 camas de casal e 8 camas de solteiro - sendo 4 em beliches, perfeito para crianças - dividas em 7 quartos com banheiros completos e chuveiro a gás");
+        let cozinhaTitulo = generate("h2", "casaTitulo", "Cozinha completa e copa");
+        let cozinhaDesc = generate("p", "casaDesc", "Com infraestrutura e louça para todos seus hóspedes, a cozinha ainda conta com uma copa em anexo ideal para o café da manhã.");
+        let salasTitulo = generate("h2", "casaTitulo", "Salas de estar e Jantar");
+        let salasDesc = generate("p", "casaDesc", "Além de uma ampla sala de estar, o sítio conta com uma sala de jantar e outra de leitura.");
+        let equipeTitulo = generate("h2", "casaTitulo", "Equipe profissional");
+        let equipeDesc = generate("p", "casaDesc", "Sua estadia será acompanhada pela Lu, auxiliar da casa encarregada da limpeza e culinária, e Pedro, gestor do sítio que ajudará com qualquer problema que possa surgir. Opcionalmente, você poderá também contratar churrasqueiro e pizzaiolo.");
+    multiAppend(casa, quartosTitulo, quartosDesc, cozinhaTitulo, cozinhaDesc, salasTitulo, salasDesc, equipeTitulo, equipeDesc)
+ 
+    multiAppend(ficha, tamanho, areaExterna, casa);
     return ficha;
 }
 
