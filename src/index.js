@@ -1,14 +1,14 @@
 import {renderElement, generateMenu, generate, changeTab} from "./shortcutFunctions";
 import {loadHome} from "./home";
 import {resumo} from "./espaco";
-import { calendar, lodgingValue } from "./calendario";
+import { calendar, lodgingValue, priceH1 } from "./calendario";
 import {map} from "./localizacao"
 import { contatoDiv } from "./contato";
 
 
 let body = document.querySelector("body");
 let contentDiv = document.querySelector("#content");
-let menu = generateMenu("Home", "Espaço", "Preço", "Localização", "Contato");
+let menu = generateMenu("Home", "Espaço", "Preço", "Mapa", "Contato");
 let active = generate("div", "activeMenu");
 menu.appendChild(active);
 body.insertBefore(menu, contentDiv);
@@ -27,6 +27,7 @@ function homeBtnsListener() {
     });
     rightBtn.addEventListener("click", e => {
         changeTab(
+            priceH1,
             calendar
         );
         active.setAttribute("style", "margin: 0 auto 0 44%");
@@ -57,6 +58,7 @@ espacoBtn.addEventListener("click", function(){
 let datasBtn = document.querySelector("#item3");
 datasBtn.addEventListener("click", function(){   
     changeTab(
+        priceH1,
         calendar
     );
     active.setAttribute("style", "margin: 0 auto 0 44%");

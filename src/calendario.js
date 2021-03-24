@@ -1,5 +1,6 @@
 import { generate, multiAppend } from "./shortcutFunctions";
 
+  let priceH1 = generate("h1", "priceH1", "Clique nas datas para simular o preço de sua estadia");
   let calendar = generate("div", "calendar");
   let month = generate("div", "month");
   let prev = generate("i", "fas");
@@ -170,4 +171,4 @@ function lodgingValue() {
   })
 }
 
-export { calendar, lodgingValue }
+export { calendar,priceH1, lodgingValue }

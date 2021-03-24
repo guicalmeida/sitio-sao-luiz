@@ -12,6 +12,7 @@ html, body, p {
 #content {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     background: linear-gradient(
 180deg
 , rgb(234 253 255 / 78%) 39%, rgb(228 255 218 / 46%) 85%);
@@ -46,7 +47,7 @@ html, body, p {
 .subtitle {
     font-weight: 300;
     font-style: italic;
-    margin: 20px 0 0 25px;
+    margin: 10px 0 0 0;
 }
 
 .overlay {
@@ -64,15 +65,16 @@ button {
     border: 0;
     font-size: 100%;
     font-family: 'Nunito', sans-serif;
-    margin: 0px 19px 0 0;
+    margin: 15px 19px 0 0;
     padding: 16px;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .btnDiv{
-    margin: 40px 0 0 25px;
+    margin-top: 15px;
 }
+
 /*menu*/
 .navbar {
     position: absolute;
@@ -104,7 +106,7 @@ ul {
 .menuItem {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    padding: 14px 0;
+    padding: 14px 5px;
 }
 
 .activeMenu{
@@ -121,6 +123,7 @@ ul {
     padding-top: 7vh;
     display: flex;
     flex-wrap: wrap;
+    width: 100vw;
 }
 
 .tamanho {
@@ -148,25 +151,25 @@ ul {
 .areaExternaDiv {
     width: 40%;
     margin: 50px;
-    min-width: 370px;
+    min-width: 270px;
 }
 
 .foto{
     object-fit: contain;
     width: 50%;
-    min-width: 450px;
+    min-width: 300px;
     margin: 10px auto;
 }
 
 .casaDiv {
     width: 40%;
     margin: 50px;
-    min-width: 370px;
+    min-width: 270px;
     text-align: end;
 }
 
 .contatoBtn {
-    margin-top: 30px;
+    margin: 15px 0 0 0;
 }
 
 .fotosBtn {
@@ -174,10 +177,16 @@ ul {
 }
 
 /*calendario*/
+
+h1.priceH1 {
+    margin: 100px 10px 0 10px;
+    text-align: center;
+}
+
 .calendar {
     width: 60vw;
-    margin: 70px auto;
-    min-width: 440px;
+    margin: 0px auto 50px auto;
+    min-width: 295px;
   }
   
   .month {
@@ -270,7 +279,6 @@ ul {
 .subtitleDiv {
     display: flex;
     align-items: center;
-    width: 400px;
     justify-content: center;
 }
 
@@ -301,4 +309,71 @@ h1.duvidaTitulo {
     font-size: 4rem;
     margin: 20px;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        font-weight: 400;
+        font-size: 3.9rem;
+        margin: 0;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .tamanhoN {
+        font-size: 4rem;
+    }
+
+    .areaExternaDiv {
+        margin: 25px;
+    }
+
+    .casaDiv {
+        margin: 25px;
+    }
+
+    .calendar {
+        min-width: 295px;
+    }
+
+    .weekdays div {
+        font-size: 1.2rem;
+    }
+
+    .days div {
+        margin: 0.1rem;
+    }
+
+    .month h1 {
+        font-size: 2rem;
+    }
+
+    .month p {
+        font-size: 1.3rem;
+    }
+
+    .month {
+        height: 5rem;
+        margin-top: 20px;
+    }
+
+    .airbnbBtn {
+        width: 150px;
+        font-size: 17px;
+        margin: 0px 5px;
+        padding: 5px;
+    }
+
+    .contatoDiv .airbnbBtn {
+        font-size: 20px;
+        margin: 0px 5px;
+        padding: 15px;
+        width: auto;
+    }
+
+    .priceh1 {
+        font-size: 30px;
+    }
 }
