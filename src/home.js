@@ -9,16 +9,8 @@ function loadHome() {
         let title = generate("h1", "title", "SÍTIO SÃO LUIZ");
         let subtitle = generate("h2", "subtitle", "O refúgio verde da sua família");
         let btnDiv = generate("div", "btnDiv");
-        let saibaMaisBtn = generate("button", "button", "Conheça o sítio");
-            saibaMaisBtn.addEventListener("click", e => {
-                changeTab(resumo());
-                active.setAttribute("style", "margin: 0 auto 0 26%");
-            })
-        let agendeBtn = generate("button", "button", "Marque uma data");
-            agendeBtn.addEventListener("click", e => {
-            changeTab(construcao());
-            active.setAttribute("style", "margin: 0 auto 0 44%");
-            })
+        let saibaMaisBtn = generate("button", "button1", "Conheça o sítio");
+        let agendeBtn = generate("button", "button2", "Marque uma data");
         multiAppend(btnDiv, saibaMaisBtn, agendeBtn);
         multiAppend(header, title, subtitle, btnDiv)
         homeDiv.appendChild(header);
@@ -31,7 +23,7 @@ function loadHome() {
         videoBG.setAttribute("id", "videoBG");
 
         let videoSource = document.createElement("source");
-        videoSource.src = "./Resources/sitiodrone2.mp4";
+        videoSource.src = "./Resources/Sitiodrone-1.m4v";
         videoSource.type = "video/mp4";
 
         videoBG.appendChild(videoSource);
