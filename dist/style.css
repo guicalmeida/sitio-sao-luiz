@@ -118,11 +118,15 @@ ul {
 
 /*Espaço*/
 .resumo {
-    padding-top: 7%;
+    padding-top: 7vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tamanho {
     text-align: center;
+    width: 100%;
+    margin: 50px auto 10px auto;
 }
 
 .tamanhoPre {
@@ -142,16 +146,31 @@ ul {
 }
 
 .areaExternaDiv {
-    padding: 1% 54% 1% 5%;
+    width: 40%;
+    margin: 50px;
+    min-width: 370px;
+}
+
+.foto{
+    object-fit: contain;
+    width: 50%;
+    min-width: 450px;
+    margin: 10px auto;
 }
 
 .casaDiv {
-    padding: 1% 5% 1% 54%;
+    width: 40%;
+    margin: 50px;
+    min-width: 370px;
     text-align: end;
 }
 
-.construcao{
-    padding: 14vh;
+.contatoBtn {
+    margin-top: 30px;
+}
+
+.fotosBtn {
+    margin: 0 auto 50px auto;
 }
 
 /*calendario*/
@@ -212,7 +231,7 @@ ul {
   .days div {
     font-size: 1.4rem;
     margin: 0.3rem;
-    width: 13%;
+    width: 12%;
     height: 65px;
     display: flex;
     justify-content: center;
@@ -240,7 +259,7 @@ ul {
     width: 180px;
     font-size: 20px;
     font-weight: 400;
-    margin: 0;
+    margin: 0 25px;
     padding: 8px;
 }
 
@@ -252,5 +271,34 @@ ul {
     display: flex;
     align-items: center;
     width: 400px;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.map {
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+}
+
+.contatoDiv {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duvidaDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.duvidaSub {
+    margin: 0 0 20px 0;
+}
+
+h1.duvidaTitulo {
+    font-size: 4rem;
+    margin: 20px;
+    text-align: center;
 }

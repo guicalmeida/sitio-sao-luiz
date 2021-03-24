@@ -125,6 +125,7 @@ function lodgingValue() {
   let userQuery = [];
   let price;
   let costPerNight = 749;
+  let cleaningCost = 300;
   let today = document.querySelector(".today");
 
   days.forEach(day => {
@@ -138,7 +139,7 @@ function lodgingValue() {
         if (userQuery.length == 0) {
           userQuery.push(Number(day.getAttribute("value")));
           day.style.background = "#b5fad2";
-          price = costPerNight;
+          price = costPerNight + cleaningCost;
           subtitleP.textContent = `R$${price}`;
         } else if (userQuery.length == 1) {
           userQuery.push(Number(day.getAttribute("value")));
@@ -152,7 +153,7 @@ function lodgingValue() {
               value.style.background = "#b5fad2";
             };
           }
-          price = (userQuery[1] - userQuery[0]) * costPerNight;
+          price = (userQuery[1] - userQuery[0]) * costPerNight + cleaningCost;
           subtitleP.textContent = `R$${price}`;
 
         } else {
@@ -161,7 +162,7 @@ function lodgingValue() {
             value.style.background = "rgba(0,0,0,0)";
           }
           day.style.background = "#b5fad2";
-          subtitleP.textContent = `R$${costPerNight}`;
+          subtitleP.textContent = `R$${costPerNight + cleaningCost}`;
           userQuery.push(Number(day.getAttribute("value")));
         }
       })

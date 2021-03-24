@@ -1,8 +1,9 @@
 import {renderElement, generateMenu, generate, changeTab} from "./shortcutFunctions";
 import {loadHome} from "./home";
 import {resumo} from "./espaco";
-import { construcao } from "./construcao";
 import { calendar, lodgingValue } from "./calendario";
+import {map} from "./localizacao"
+import { contatoDiv } from "./contato";
 
 
 let body = document.querySelector("body");
@@ -65,7 +66,7 @@ datasBtn.addEventListener("click", function(){
 let localBtn = document.querySelector("#item4");
 localBtn.addEventListener("click", function(){   
     changeTab(
-        construcao()
+        map
     );
     active.setAttribute("style", "margin: 0 auto 0 62%");
 })
@@ -73,7 +74,7 @@ localBtn.addEventListener("click", function(){
 let contatoBtn = document.querySelector("#item5");
 contatoBtn.addEventListener("click", function(){   
     changeTab(
-        construcao()
+        contatoDiv
     );
     active.setAttribute("style", "margin: 0 auto 0 80%");
 })

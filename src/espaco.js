@@ -19,7 +19,15 @@ function resumo () {
         let entretTitulo = generate("h2", "areaExternaTitulo", "Entretenimento");
         let entretDesc = generate("p", "areaExternaDesc", "Campo de futebol, mesa para carteado, mesa de ping-pong, piscina, espaço para fogueira e muita área livre para brincadeiras são algumas opções para sua família - e para aproveitar um filme a noite, há TV a cabo e Netflix.");
         let contatoExtBtn = generate("button", "contatoBtn", "Traga sua família");
+        contatoExtBtn.addEventListener("click", e =>{return window.open("https://www.airbnb.com.br/rooms/43450708")});
     multiAppend(areaExterna, piscinaTitulo, piscinaDesc, vegetacaoTitulo, vegetacaoDesc, cozExtTitulo, cozExtDesc, entretTitulo, entretDesc, contatoExtBtn);
+
+    let fotoFachada = generate("img", "foto");
+    fotoFachada.setAttribute("src", "./Resources/fachada.jpeg");
+
+    let cafedaManha = generate("img", "foto");
+    cafedaManha.setAttribute("src", "./Resources/cafedamanha.jpg")
+
 
     let casa = generate("div", "casaDiv");
         let quartosTitulo = generate("h2", "casaTitulo", "7 suítes");
@@ -31,11 +39,13 @@ function resumo () {
         let equipeTitulo = generate("h2", "casaTitulo", "Equipe profissional");
         let equipeDesc = generate("p", "casaDesc", "Sua estadia será acompanhada pela Lu, auxiliar da casa encarregada da limpeza e culinária, e Pedro, gestor do sítio que ajudará com qualquer problema que possa surgir. Opcionalmente, você poderá também contratar churrasqueiro e pizzaiolo.");
         let contatoCasaBtn = generate("button", "contatoBtn", "Reserve agora");
+        contatoCasaBtn.addEventListener("click", e =>{return window.open("https://www.airbnb.com.br/rooms/43450708")});
     multiAppend(casa, quartosTitulo, quartosDesc, cozinhaTitulo, cozinhaDesc, salasTitulo, salasDesc, equipeTitulo, equipeDesc, contatoCasaBtn)
     
-    let contato = generate("button", "contatoBtn", "Entre em contato");
+    let contato = generate("button", "fotosBtn", "Veja mais fotos");
+    contato.addEventListener("click", e =>{return window.open("https://www.airbnb.com.br/rooms/43450708")});
 
-    multiAppend(ficha, tamanho, areaExterna, casa, contato);
+    multiAppend(ficha, tamanho, areaExterna, fotoFachada, cafedaManha, casa, contato);
     
     return ficha;
 }

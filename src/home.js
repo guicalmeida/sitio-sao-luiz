@@ -1,6 +1,4 @@
-import { construcao } from "./construcao";
-import { resumo } from "./espaco";
-import { changeTab, generate, multiAppend } from "./shortcutFunctions";
+import { generate, multiAppend } from "./shortcutFunctions";
 
 function loadHome() {
     let homeDiv = generate("div", "homeDiv");
@@ -21,6 +19,7 @@ function loadHome() {
         videoBG.setAttribute("autoplay", true);
         videoBG.setAttribute("loop", true);
         videoBG.setAttribute("id", "videoBG");
+        videoBG.setAttribute("muted", true);
 
         let videoSource = document.createElement("source");
         videoSource.src = "./Resources/Sitiodrone-1.m4v";
