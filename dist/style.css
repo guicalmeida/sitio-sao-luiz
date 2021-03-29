@@ -1,379 +1,428 @@
 /*geral*/
 :root {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-html, body, p {
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
-    overflow-x: hidden;
+html,
+body,
+p {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
 #content {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(
-180deg
-, rgb(234 253 255 / 78%) 39%, rgb(228 255 218 / 46%) 85%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgb(234 253 255 / 78%) 39%,
+    rgb(228 255 218 / 46%) 85%
+  );
 }
 
 /*home*/
 #videoBG {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
 }
 
 .header {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    margin-left: 6%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  margin-left: 6%;
 }
 
 .title {
-    font-weight: 400;
-    font-size: 5rem;
-    margin: 0;
+  font-weight: 400;
+  font-size: 5rem;
+  margin: 0;
 }
 
 .subtitle {
-    font-weight: 300;
-    font-style: italic;
-    margin: 10px 0 0 0;
+  font-weight: 300;
+  font-style: italic;
+  margin: 10px 0 0 0;
 }
 
 .overlay {
-    height: 100vh;
-    position: absolute;
-    background: rgb(183,255,144);
-    background: linear-gradient( 
-        90deg
-         , rgb(64 193 255 / 50%) 0%, rgba(140,244,181,0.5) 38%, rgba(94,233,222,0.3) 75%, rgba(17,153,142,0) 100%);
-    width: 100vw;
-    z-index: 1;
+  height: 100vh;
+  position: absolute;
+  background: rgb(183, 255, 144);
+  background: linear-gradient(
+    90deg,
+    rgb(64 193 255 / 50%) 0%,
+    rgba(140, 244, 181, 0.5) 38%,
+    rgba(94, 233, 222, 0.3) 75%,
+    rgba(17, 153, 142, 0) 100%
+  );
+  width: 100vw;
+  z-index: 1;
 }
 
 button {
-    border: 0;
-    font-size: 100%;
-    font-family: 'Nunito', sans-serif;
-    margin: 15px 19px 0 0;
-    padding: 16px;
-    border-radius: 10px;
-    cursor: pointer;
+  border: 0;
+  font-size: 100%;
+  font-family: "Nunito", sans-serif;
+  margin: 15px 19px 0 0;
+  padding: 16px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.btnDiv{
-    margin-top: 15px;
+.btnDiv {
+  margin-top: 15px;
 }
 
 /*menu*/
 .navbar {
-    position: absolute;
-    z-index: 3;
-    width: 100vw;
-    font-weight: 600;
-    margin: 10px 0;
+  position: absolute;
+  z-index: 3;
+  width: 100vw;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    text-align: center;
-    margin: 0 auto;
-    height: 55px;
-    align-items: center;
-    padding: 0;
-    width: 90vw;
-    background-color: #f4f4f5;
-    box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 80%);
-    color: #3ba4c3;
-    border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  margin: 0 auto;
+  height: 55px;
+  align-items: center;
+  padding: 0;
+  width: 90vw;
+  background-color: #f4f4f5;
+  box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 80%);
+  color: #3ba4c3;
+  border-radius: 20px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .menuItem {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    padding: 14px 5px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 14px 5px;
 }
 
-.activeMenu{
-    width: 12%;
-    height: 4px;
-    background: #3ba4c3;
-    position: relative;
-    transform: translateY(-4px);
-    transition: all 0.5s ease;
+.activeMenu {
+  width: 12%;
+  height: 4px;
+  background: #3ba4c3;
+  position: relative;
+  transform: translateY(-4px);
+  transition: all 0.5s ease;
 }
 
 /*Espaço*/
 .resumo {
-    padding-top: 7vh;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
+  padding-top: 7vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
 }
 
 .tamanho {
-    text-align: center;
-    width: 100%;
-    margin: 50px auto 10px auto;
+  text-align: center;
+  width: 100%;
+  margin: 50px auto 10px auto;
 }
 
 .tamanhoPre {
-    font-size: 2rem;
-    font-weight: 200;
+  font-size: 2rem;
+  font-weight: 200;
 }
 
-.tamanhoN{
-    font-weight: 800;
-    font-size: 5rem;
-    color: #3b9df3;
+.tamanhoN {
+  font-weight: 800;
+  font-size: 5rem;
+  color: #3b9df3;
 }
 
 .tamanhoPos {
-    font-weight: 300;
-    font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .areaExternaDiv {
-    width: 40%;
-    margin: 50px;
-    min-width: 270px;
+  width: 40%;
+  margin: 50px;
+  min-width: 270px;
 }
 
-.foto{
-    object-fit: contain;
-    width: 50%;
-    min-width: 300px;
-    margin: 10px auto;
+.foto {
+  object-fit: contain;
+  width: 50%;
+  min-width: 300px;
+  margin: 10px auto;
 }
 
 .casaDiv {
-    width: 40%;
-    margin: 50px;
-    min-width: 270px;
-    text-align: end;
+  width: 40%;
+  margin: 50px;
+  min-width: 270px;
+  text-align: end;
 }
 
 .contatoBtn {
-    margin: 15px 0 0 0;
+  margin: 15px 0 0 0;
 }
 
 .fotosBtn {
-    margin: 0 auto 50px auto;
+  margin: 0 auto 50px auto;
 }
 
 /*calendario*/
 
 h1.priceH1 {
-    margin: 100px 10px 0 10px;
-    text-align: center;
+  margin: 100px 10px 0 10px;
+  text-align: center;
 }
 
 .calendar {
-    width: 60vw;
-    margin: 0px auto 50px auto;
-    min-width: 295px;
-  }
-  
-  .month {
-    height: 12rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center; 
-  }
-  
-  .month .fas {
-    font-size: 2.5rem;
-    cursor: pointer;
-  }
-  
-  .month h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .month p {
-    font-size: 1.6rem;
-  }
-  
-  .weekdays {
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .weekdays div {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    width: 13%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .days {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .days div {
-    font-size: 1.4rem;
-    margin: 0.3rem;
-    width: 12%;
-    height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.2s;
-  }
-  
-  .days div:hover:not([class]) {
-    background-color: #b5fad2;
-    cursor: pointer;
-  }
-  
-  .prev-date,
-  .next-date {
-    opacity: 0.5;
-  }
-  
-  .today {
-    background: rgb(227, 242, 249);
-  }
+  width: 60vw;
+  margin: 0px auto 50px auto;
+  min-width: 295px;
+}
+
+.month {
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.month .fas {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: 12%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not([class]) {
+  background-color: #b5fad2;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background: rgb(227, 242, 249);
+}
 
 .airbnbBtn {
-    background: #FF5A60;
-    color: white;
-    width: 180px;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0 25px;
-    padding: 8px;
+  background: #ff5a60;
+  color: white;
+  width: 180px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 25px;
+  padding: 8px;
 }
 
 .airbnbBtn i {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .subtitleDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*mapa e clima*/
+
+.weatherDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+h1.weatherTitle {
+  margin: 100px 10px 15px 10px;
+  text-align: center;
+}
+
+.allTempDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.tempDiv {
+  margin: 15px;
+}
+
+p.temp {
+  font-size: 4rem;
+}
+
+p.tempTxt {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+a.moreInfo {
+  align-self: flex-end;
+  margin: 0 135px 20px 0;
 }
 
 .map {
-    width: 80vw;
-    height: 70vh;
-    margin: auto;
+  width: 80vw;
+  height: 70vh;
+  margin: auto;
 }
 
+/*Contato*/
 .contatoDiv {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .duvidaDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p.duvidaSub {
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 h1.duvidaTitulo {
-    font-size: 4rem;
-    margin: 20px;
-    text-align: center;
+  font-size: 4rem;
+  margin: 20px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
-    .title {
-        font-weight: 400;
-        font-size: 3.9rem;
-        margin: 0;
-    }
+  .title {
+    font-weight: 400;
+    font-size: 3.9rem;
+    margin: 0;
+  }
 
-    .subtitle {
-        font-size: 20px;
-    }
+  .subtitle {
+    font-size: 20px;
+  }
 
-    .tamanhoN {
-        font-size: 4rem;
-    }
+  .tamanhoN {
+    font-size: 4rem;
+  }
 
-    .areaExternaDiv {
-        margin: 25px;
-    }
+  .areaExternaDiv {
+    margin: 25px;
+  }
 
-    .casaDiv {
-        margin: 25px;
-    }
+  .casaDiv {
+    margin: 25px;
+  }
 
-    .calendar {
-        min-width: 295px;
-    }
+  .calendar {
+    min-width: 295px;
+  }
 
-    .weekdays div {
-        font-size: 1.2rem;
-    }
+  .weekdays div {
+    font-size: 1.2rem;
+  }
 
-    .days div {
-        margin: 0.1rem;
-    }
+  .days div {
+    margin: 0.1rem;
+  }
 
-    .month h1 {
-        font-size: 2rem;
-    }
+  .month h1 {
+    font-size: 2rem;
+  }
 
-    .month p {
-        font-size: 1.3rem;
-    }
+  .month p {
+    font-size: 1.3rem;
+  }
 
-    .month {
-        height: 5rem;
-        margin-top: 20px;
-    }
+  .month {
+    height: 5rem;
+    margin-top: 20px;
+  }
 
-    .airbnbBtn {
-        width: 150px;
-        font-size: 17px;
-        margin: 0px 5px;
-        padding: 5px;
-    }
+  .airbnbBtn {
+    width: 150px;
+    font-size: 17px;
+    margin: 0px 5px;
+    padding: 5px;
+  }
 
-    .contatoDiv .airbnbBtn {
-        font-size: 20px;
-        margin: 0px 5px;
-        padding: 15px;
-        width: auto;
-    }
+  .contatoDiv .airbnbBtn {
+    font-size: 20px;
+    margin: 0px 5px;
+    padding: 15px;
+    width: auto;
+  }
 
-    .priceh1 {
-        font-size: 30px;
-    }
+  .priceh1 {
+    font-size: 30px;
+  }
 }
