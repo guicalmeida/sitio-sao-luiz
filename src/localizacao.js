@@ -29,7 +29,7 @@ multiAppend(tempDiv, tempNowDiv, tempFeelDiv);
 multiAppend(weatherDiv, weatherTitle, tempDiv, moreInfo);
 (async function getWeather() {
   const response = await fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=Ara%C3%A7oiaba%20da%20serra&lang=pt_br&appid=ee5f5677a63d2406b5a967e5d2beee70&units=metric",
+    "https://api.openweathermap.org/data/2.5/weather?q=Ara%C3%A7oiaba%20da%20serra&lang=pt_br&appid=ee5f5677a63d2406b5a967e5d2beee70&units=metric",
     { mode: "cors" }
   );
   const weatherData = await response.json();
